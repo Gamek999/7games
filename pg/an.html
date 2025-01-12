@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #0d1b2a;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+
+
+        .form-container {
+            margin-top: 12vh;
+            width: 70%;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 3vh 2vw;
+            box-shadow: 0 8px 23px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container form {
+            margin: auto;
+            width: 60%;
+        }
+
+        .form-title {
+            font-size: 24px;
+            margin-bottom: 2vh;
+            text-align: center;
+            color: #00bcd4;
+        }
+
+
+        .form-field {
+            margin-bottom: 6vh;
+            scroll-margin-top: 9vh;
+
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 0.5vh;
+        }
+
+        .form-field input,
+        .form-field textarea,
+        .form-field select {
+            width: 100%;
+            padding: 1vh;
+            font-size: 16px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .form-field input[type="radio"],
+        .form-field input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3vh;
+        }
+
+        .buttons button {
+            padding: 1vh 3vw;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn {
+            background-color: #00bcd4;
+            color: #ffffff;
+        }
+
+        .submit-btn:hover {
+            background-color: #0097a7;
+        }
+
+        .reset-btn {
+            background-color: #ff5722;
+            color: #ffffff;
+        }
+
+        .reset-btn:hover {
+            background-color: #e64a19;
+        }
+
+        .back-to-top {
+            margin-top: 2vh;
+            padding: 1vh 2vw;
+            background-color: #1e1e1e;
+            color: #00bcd4;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            color: #ffffff;
+            background-color: #333;
+        }
+
+
+        @media (max-width: 600px) {
+            .form-container {
+                width: 90%;
+            }
+
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="menu">
+            <li><a href="../main.html">Powrót</a></li>
+            <li><a href="../pg/mc.html">Minecraft</a></li>
+            <li><a href="../pg/am.html">AmongUs</a></li>
+            <li><a href="../pg/cs.html">CounterStrike</a></li>
+            <li><a href="../pg/fn.html">Fortnite</a></li>
+            <li><a href="../pg/ro.html">Roblox</a></li>
+            <li><a href="../pg/mi.html">Minesweeper</a></li>
+            <li><a href="../pg/va.html">Valorant</a></li>
+            <li><a href="../pg/an.html">Ankieta</a></li>
+            <li><a href="../pg/me.html">Media</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <img src="../ph/logo.jpg" alt="Game Logo" class="logo">
+        <h1 class="game-title">ANKIETA</h1>
+    </header>
+    <br><br>
+    <nav style="max-width: 77vw; ">
+        <ul style=" display: flex;flex-wrap: wrap; ">
+            <li><a href="#question1">Pytanie 1</a></li>
+            <li><a href="#question2">Pytanie 2</a></li>
+            <li><a href="#question3">Pytanie 3</a></li>
+            <li><a href="#question4">Pytanie 4</a></li>
+            <li><a href="#question5">Pytanie 5</a></li>
+            <li><a href="#question6">Pytanie 6</a></li>
+            <li><a href="#question6">Pytanie 7</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <br><br>
+        <form>
+
+            <div id="question1" class="form-field">
+                <label for="name">1. Twoje imię:</label>
+                <input type="text" id="name" name="name" placeholder="Wpisz swoje imię">
+            </div>
+
+
+            <div id="question2" class="form-field">
+                <label>2. Wybierz swoją ulubioną platformę:</label>
+                <br>
+
+                <label for="pc"><input type="radio" id="pc" name="platform" value="PC">PC</label>
+
+                <label for="console"><input type="radio" id="console" name="platform" value="Console">Konsola</label>
+
+                <label for="mobile"><input type="radio" id="mobile" name="platform" value="Mobile">Smartfon</label>
+                <label for="tablet"><input type="radio" id="tablet" name="platform" value="Tablet">Tablet</label>
+            </div>
+
+
+            <div id="question3" class="form-field">
+                <label for="feedback">3. Podziel się swoją opinią na temat ostatniej aktualizacji Fortnite:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Wpisz swoją opinię..."></textarea>
+            </div>
+
+
+            <div id="question4" class="form-field">
+                <label for="age">4. Wiek:</label>
+                <select id="age" name="age">
+                    <option value="below18">Poniżej 18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36plus">36+</option>
+                </select>
+            </div>
+
+            <div id="question5" class="form-field">
+                <label>5. Jakie gry najbarziej preferujesz?:</label><br>
+
+                <label for="shooter"><input type="checkbox" id="shooter" name="game-type"
+                        value="Shooter">Strzelanki</label>
+
+                <label for="rpg"> <input type="checkbox" id="rpg" name="game-type" value="RPG">RPG</label>
+
+                <label for="strategy"> <input type="checkbox" id="strategy" name="game-type"
+                        value="Strategy">Strategiczne</label>
+                <label for="strategy"> <input type="checkbox" id="strategy" name="game-type"
+                        value="Strategy">Przygodowe</label>
+            </div>
+
+            <div id="question6" class="form-field">
+                <label>6. Ile czasu miesięcznie spędzasz na graniu?:</label>
+                <br>
+                <label for="10h"><input type="radio" id="10h" name="hours" value="10">10 godzin</label>
+                <label for="20h"><input type="radio" id="20h" name="hours" value="20">20 godzin</label>
+                <label for="50h"><input type="radio" id="50h" name="hours" value="50">50 godzin</label>
+                <label for="100h"><input type="radio" id="100h" name="hours" value="100">100 godzin</label>
+                <label for="100h+"><input type="radio" id="100h+" name="hours" value="100+">ponad 100 godzin</label>
+            </div>
+
+            <div id="question7" class="form-field">
+                <label for="email">7. Twój email (opcjonalnie):</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+            </div>
+
+
+            <div class="buttons">
+                <button type="reset" class="reset-btn">Wyczyść</button>
+                <button type="submit" class="submit-btn">Prześlij</button>
+            </div>
+        </form>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Powrót do góry</button>
+    </div>
+    <br><br><br><br><br><br>
+    <script src="main.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 Filip Bąk. Klasa 2 tc. Strona o 7 grach.</p>
+    </footer>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('visible');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatyczna Galeria</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        nav {
+            background-color: #0d1b2a;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin: 20px 0;
+        }
+
+
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 8vh;
+            width: 70%;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 3vh 2vw;
+            box-shadow: 0 8px 23px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .large-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2vh;
+        }
+
+        #main-image {
+            width: 80vw;
+            max-width: 800px;
+            transition: opacity 1s ease, 0.3s ease;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 2vh;
+        }
+
+        .thumbnails img {
+            min-width: 80px;
+            width: 15vw;
+            max-width: 150px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnails img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .audio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4vh;
+        }
+
+        .video {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4vh;
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100vw;
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 2vh;
+            color: #aaaaaa;
+            font-size: 1.5vh;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="menu">
+            <li><a href="../main.html">Powrót</a></li>
+            <li><a href="../pg/mc.html">Minecraft</a></li>
+            <li><a href="../pg/am.html">AmongUs</a></li>
+            <li><a href="../pg/cs.html">CounterStrike</a></li>
+            <li><a href="../pg/fn.html">Fortnite</a></li>
+            <li><a href="../pg/ro.html">Roblox</a></li>
+            <li><a href="../pg/mi.html">Minesweeper</a></li>
+            <li><a href="../pg/va.html">Valorant</a></li>
+            <li><a href="../pg/an.html">Ankieta</a></li>
+            <li><a href="../pg/me.html">Media</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <img src="../ph/logo.jpg" alt="Game Logo" class="logo">
+        <h1 class="game-title">MEDIA</h1>
+    </header>
+
+    <main>
+        <h1 style="font-size: 3.5vh;" class="game-title">GALERIA</h1>
+        <section class="gallery"><br><br>
+            <a target="_blank" id="main-image-link" href="../ph/Suseł.jpg">
+                <div class="large-image">
+                    <img id="main-image" src="../ph/Suseł.jpg" alt="Main Image">
+                </div>
+            </a>
+            <div class="thumbnails">
+                <img src="../ph/Suseł.jpg" alt="Thumbnail 1" onclick="changeImage('../ph/Suseł.jpg')">
+                <img src="../ph/cs2.jpg" alt="Thumbnail 2" onclick="changeImage('../ph/cs2.jpg')">
+                <img src="../ph/fn.jpg" alt="Thumbnail 3" onclick="changeImage('../ph/fn.jpg')">
+                <img src="../ph/ms.png" alt="Thumbnail 4" onclick="changeImage('../ph/ms.png')">
+                <img src="../ph/val.jpg" alt="Thumbnail 5" onclick="changeImage('../ph/val.jpg')">
+            </div>
+        </section>
+
+        <section class="video"><br><br>
+            <h1 style="font-size: 3.5vh;" class="game-title">DARMOWE GRUPY NA ROBLOX</h1><br><br>
+            <iframe width="850vw" height="480vw" src="https://www.youtube.com/embed/1TZZgsScghw?si=4y9MzTMEjGfs8tIB"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </section>
+        <section class="video"><br><br>
+            <h1 style="font-size: 3.5vh;" class="game-title">LOKALIZACJA SIEDZIBY ORBLOX</h1><br><br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35798.9308968339!2d-122.27167724813005!3d37.52658562147793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9f006fbc59d1%3A0x56c55dba0e7eb39d!2sRoblox%20Headquarters!5e0!3m2!1sen!2spl!4v1736700949309!5m2!1sen!2spl"
+                width="850vw" height="480vw" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe><br><br><br><br>
+        </section>
+    </main>
+    <br><br><br><br><br><br><br>
+    <footer class="footer">
+        <p>&copy; 2025 Filip Bąk. Klasa 2 tc. Strona o 7 grach.</p>
+    </footer>
+
+    <script>
+        let images = ["../ph/Suseł.jpg", "../ph/cs2.jpg", "../ph/fn.jpg", "../ph/ms.png", "../ph/val.jpg"];
+        let currentImageIndex = 0;
+
+        function changeImage(image) {
+            document.getElementById("main-image").src = image;
+            document.getElementById("main-image-link").href = image;
+        }
+
+        function autoChangeImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById("main-image").src = images[currentImageIndex];
+            document.getElementById("main-image-link").href = images[currentImageIndex];
+        }
+
+        setInterval(autoChangeImage, 4000); 
+    </script>
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('visible');
+        });
+    </script>
+</body>
+
+</body>
+
+</html>

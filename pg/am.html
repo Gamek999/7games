@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmongUs</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../ph/Suseł.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        nav {
+            background-color: #0d1b2a;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="menu">
+            <li><a href="../main.html">Powrót</a></li>
+            <li><a href="../pg/mc.html">Minecraft</a></li>
+            <li><a href="../pg/am.html">AmongUs</a></li>
+            <li><a href="../pg/cs.html">CounterStrike</a></li>
+            <li><a href="../pg/fn.html">Fortnite</a></li>
+            <li><a href="../pg/ro.html">Roblox</a></li>
+            <li><a href="../pg/mi.html">Minesweeper</a></li>
+            <li><a href="../pg/va.html">Valorant</a></li>
+            <li><a href="../pg/an.html">Ankieta</a></li>
+            <li><a href="../pg/me.html">Media</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="header">
+        <img src="../ph/logo.jpg" alt="Game Logo" class="logo">
+        <h1 class="game-title">AMONG US</h1>
+    </header>
+
+
+
+
+    <div class="main">
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <th>Nazwa</th>
+                    <td>Among Us</td>
+                </tr>
+                <tr>
+                    <th>Gatunek</th>
+                    <td>Party, Dedukcja społeczna</td>
+                </tr>
+                <tr>
+                    <th>Platformy</th>
+                    <td>Komputer, Konsola, Smartfon</td>
+                </tr>
+                <tr>
+                    <th>Data Wydania</th>
+                    <td>2018-06-15</td>
+                </tr>
+                <tr>
+                    <th>Opis</th>
+                    <td>Among Us to gra społeczna, w której gracze muszą współpracować, aby wykonać zadania na statku
+                        kosmicznym, jednocześnie starając się zidentyfikować oszusta (Impostora), który sabotuje misję.
+                        Gra stawia na komunikację i dedukcję, a jej popularność wzrosła dzięki streamom i grze w
+                        większych grupach.</td>
+                </tr>
+                <tr>
+                    <th>Instalator</th>
+                    <td><a target="_blank" href="https://www.innersloth.com/gameAmongUs.php">Link do strony z
+                            instalatorem gry</a> [otwiera w nowej karcie]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Filip Bąk. Klasa 2 tc. Strona o 7 grach.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('visible');
+        });
+    </script>
+</body>
+
+</html>

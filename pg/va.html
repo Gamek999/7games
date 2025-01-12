@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../ph/val.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        nav {
+            background-color: #0d1b2a;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+
+        div[id^="section"] {
+            padding: 100px 20px;
+            text-align: center;
+            border-top: 2px solid #333;
+        }
+
+        div[id^="section"]:nth-child(even) {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="menu">
+            <li><a href="../main.html">Powrót</a></li>
+            <li><a href="../pg/mc.html">Minecraft</a></li>
+            <li><a href="../pg/am.html">AmongUs</a></li>
+            <li><a href="../pg/cs.html">CounterStrike</a></li>
+            <li><a href="../pg/fn.html">Fortnite</a></li>
+            <li><a href="../pg/ro.html">Roblox</a></li>
+            <li><a href="../pg/mi.html">Minesweeper</a></li>
+            <li><a href="../pg/va.html">Valorant</a></li>
+            <li><a href="../pg/an.html">Ankieta</a></li>
+            <li><a href="../pg/me.html">Media</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="header">
+        <img src="../ph/logo.jpg" alt="Game Logo" class="logo">
+        <h1 class="game-title">VALORANT</h1>
+    </header>
+
+
+
+
+    <div class="main">
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <th>Nazwa</th>
+                    <td>Valorant</td>
+                </tr>
+                <tr>
+                    <th>Gatunek</th>
+                    <td>First-person shooter</td>
+                </tr>
+                <tr>
+                    <th>Platformy</th>
+                    <td>Komputer</td>
+                </tr>
+                <tr>
+                    <th>Data Wydania</th>
+                    <td>2020-06-02</td>
+                </tr>
+                <tr>
+                    <th>Opis</th>
+                    <td>Valorant to taktyczna strzelanka FPS stworzona przez Riot Games. Gra skupia się na drużynowej
+                        rywalizacji, gdzie dwie drużyny po 5 graczy walczą ze sobą, wykonując cele na mapach i
+                        eliminując przeciwników. Każdy gracz wybiera postać (Agent) z unikalnymi umiejętnościami, które
+                        wpływają na strategię drużyny.</td>
+                </tr>
+                <tr>
+                    <th>Instalator</th>
+                    <td><a target="_blank" href="https://playvalorant.com/en-us/download/">Link do strony z instalatorem
+                            gry</a> [otwiera w nowej karcie]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Filip Bąk. Klasa 2 tc. Strona o 7 grach.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('visible');
+        });
+    </script>
+</body>
+
+</html>
